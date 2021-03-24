@@ -1,17 +1,21 @@
 class Memory {
     constructor() {
+      
       this.memory = new Float64Array(1024);
       this.head = 0;
     }
   
     allocate(size) {
+      
       if (this.head + size > this.memory.length) {
+        
         return null;
       }
   
       let start = this.head;
-  
+      
       this.head += size;
+     
       return start;
     }
   
